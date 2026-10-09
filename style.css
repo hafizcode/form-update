@@ -1,0 +1,241 @@
+:root {
+    color-scheme: light;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #082c58;
+    background: #f8fbfa;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 7px 8px;
+    background: #f8fbfa;
+}
+
+.contact-card {
+    width: 100%;
+    max-width: 469px;
+    margin: 0 auto;
+    padding: 32px 30px 30px;
+    border: 1px solid #cfe3df;
+    border-radius: 11px;
+    background: #fff;
+    box-shadow: 0 2px 8px rgb(23 54 67 / 8%);
+}
+
+h1 {
+    margin: 0 0 8px;
+    color: #082c58;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.intro {
+    margin: 0 0 25px;
+    color: #6e829a;
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+.field-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.field {
+    min-width: 0;
+    margin: 0 0 16px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    color: #082c58;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+input,
+select,
+textarea {
+    display: block;
+    width: 100%;
+    border: 1px solid #cfe3df;
+    border-radius: 6px;
+    outline: none;
+    background-color: #fff;
+    color: #183654;
+    font: 11px Arial, Helvetica, sans-serif;
+    transition: border-color 140ms ease, box-shadow 140ms ease;
+}
+
+input,
+select {
+    height: 34px;
+    padding: 0 11px;
+}
+
+select {
+    cursor: pointer;
+}
+
+textarea {
+    min-height: 82px;
+    padding: 9px 11px;
+    line-height: 1.45;
+    resize: vertical;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #75869a;
+    opacity: 1;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #8bbab2;
+    box-shadow: 0 0 0 2px rgb(139 186 178 / 16%);
+}
+
+.message-field {
+    margin-bottom: 16px;
+}
+
+.company-roles {
+    max-height: 260px;
+    overflow-y: auto;
+    margin: 0 0 16px;
+    padding: 12px;
+    border: 1px solid #cfe3df;
+    border-radius: 7px;
+    background: #f8fbfa;
+}
+
+.company-role-group+.company-role-group {
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid #dce9e6;
+}
+
+.company-role-group h3 {
+    margin: 0 0 8px;
+    color: #082c58;
+    font-size: 11px;
+    line-height: 1.35;
+}
+
+.company-role-group > .field {
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.company-role-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 6px 10px;
+}
+
+.company-role-option {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin: 0;
+    color: #183654;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 1.35;
+    cursor: pointer;
+}
+
+.company-role-option input {
+    flex: 0 0 auto;
+    width: 14px;
+    height: 14px;
+    margin: 0;
+    accent-color: #082c58;
+}
+
+.company-roles-empty {
+    margin: 0;
+    color: #6e829a;
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+button {
+    display: block;
+    width: 100%;
+    min-height: 38px;
+    border: 0;
+    border-radius: 7px;
+    background: #f9a51a;
+    color: #082c58;
+    font: 700 12px Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    transition: background-color 140ms ease, transform 140ms ease;
+}
+
+button:hover {
+    background: #f3980d;
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+button:focus-visible {
+    outline: 3px solid rgb(8 44 88 / 25%);
+    outline-offset: 2px;
+}
+
+.form-status {
+    min-height: 0;
+    margin: 0;
+    color: #24664f;
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+.form-status.is-error {
+    color: #a12727;
+}
+
+.form-status:not(:empty) {
+    margin-top: 12px;
+}
+
+button:disabled {
+    cursor: wait;
+    opacity: 0.7;
+}
+
+@media (max-width: 420px) {
+    body {
+        padding: 8px;
+    }
+
+    .contact-card {
+        padding: 25px 20px 22px;
+    }
+
+    .field-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .company-role-list {
+        grid-template-columns: 1fr;
+    }
+}

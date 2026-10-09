@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Send Us a Message</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main class="contact-card">
+    <h1>Send Us a Message</h1>
+    <p class="intro">Fill the form below and we will get back to you within one business day.</p>
+
+    <form id="contact-form">
+      <div class="field-row">
+        <div class="field">
+          <label for="full-name">Full Name *</label>
+          <input id="full-name" name="fullName" type="text" placeholder="Rajesh Kumar" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="phone">Phone Number *</label>
+          <input id="phone" name="phone" type="tel" placeholder="+91 98765 43210" autocomplete="tel" required>
+        </div>
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <label for="email">Email Address *</label>
+          <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+        </div>
+        <div class="field">
+          <label for="inquiry">What are you looking for? *</label>
+          <select id="inquiry" name="inquiry" required>
+            <option value="" selected disabled>Select an option</option>
+            <option value="hire-talent">I am hiring talent</option>
+            <option value="looking-for-job">I am looking for a job</option>
+            <option value="interview-training">Interview training for students</option>
+            <option value="profile-upgrade">Courses to upgrade your profile</option>
+          </select>
+        </div>
+      </div>
+
+      <section id="job-seeker-section" aria-label="Looking for a job" hidden>
+        <div class="field-row">
+          <div class="field">
+            <label for="years-experience">Years of experience *</label>
+            <input id="years-experience" name="yearsExperience" type="number" min="0" step="0.5" placeholder="Years of experience">
+          </div>
+          <div class="field">
+            <label for="job-seeker-age">Age *</label>
+            <input id="job-seeker-age" name="age" type="number" min="1" max="100" placeholder="Your age">
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="job-role">Role *</label>
+            <input id="job-role" name="role" type="text" placeholder="Role you are looking for">
+          </div>
+          <div class="field">
+            <label for="job-location">Location *</label>
+            <input id="job-location" name="location" type="text" placeholder="Preferred location">
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="expected-ctc">CTC / Expected CTC *</label>
+            <input id="expected-ctc" name="expectedCtc" type="text" placeholder="e.g. 6 LPA">
+          </div>
+          <div class="field">
+            <label for="notice-period">Notice Period *</label>
+            <input id="notice-period" name="noticePeriod" type="text" placeholder="e.g. Immediate / 30 days">
+          </div>
+        </div>
+      </section>
+
+      <div id="company-details-section" hidden>
+        <div class="field">
+          <label for="company-category">Industry type *</label>
+          <select id="company-category" name="companyCategory">
+            <option value="" selected disabled>Select industry</option>
+          </select>
+        </div>
+
+        <div class="field" id="other-industry-field" hidden>
+          <label for="other-industry">Enter industry name *</label>
+          <input id="other-industry" type="text" placeholder="Industry name">
+        </div>
+
+        <div class="field" id="other-industry-roles-field" hidden>
+          <label for="other-industry-roles">Enter the roles you’d like to hire for *</label>
+          <textarea id="other-industry-roles" placeholder="Roles you’d like to hire for"></textarea>
+        </div>
+
+        <div id="company-role-search-section">
+          <div class="field">
+            <label for="company-role-search">Search roles</label>
+            <input id="company-role-search" type="search" placeholder="Type a role, e.g. Data Analyst"
+              autocomplete="off">
+          </div>
+
+          <div id="company-roles" class="company-roles" aria-live="polite"></div>
+        </div>
+      </div>
+
+      <button type="submit">Send Message</button>
+      <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+    </form>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
